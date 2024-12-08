@@ -1,5 +1,8 @@
 package com.ps;
 
+import model.LeaseContract;
+import model.SalesContract;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 

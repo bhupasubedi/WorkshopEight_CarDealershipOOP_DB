@@ -1,5 +1,8 @@
 package com.ps;
 
+import model.Dealership;
+import model.Vehicle;
+
 import java.io.*;
 import java.util.List;
 

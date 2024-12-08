@@ -1,4 +1,4 @@
-package com.ps;
+package model;
 
 
 public class Vehicle {
@@ -10,8 +10,12 @@ public class Vehicle {
     private String color;
     private int odometer;
     private double price;
+    private int dealership_id;
 
-    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price) {
+    public Vehicle() {
+    }
+
+    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price, int dealership_id) {
         this.vin = vin;
         this.year = year;
         this.make = make;
@@ -20,6 +24,7 @@ public class Vehicle {
         this.color = color;
         this.odometer = odometer;
         this.price = price;
+        this.dealership_id = dealership_id;
     }
 
     public int getVin() {
@@ -86,6 +91,14 @@ public class Vehicle {
         this.price = price;
     }
 
+    public int getDealership_id() {
+        return dealership_id;
+    }
+
+    public void setDealership_id(int dealership_id) {
+        this.dealership_id = dealership_id;
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +
@@ -97,6 +110,7 @@ public class Vehicle {
                 ", color='" + color + '\'' +
                 ", odometer=" + odometer +
                 ", price=" + price +
+                ", dealership_id=" + dealership_id +
                 '}';
     }
 }
