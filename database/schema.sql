@@ -1,6 +1,8 @@
-DROP DATABASE cardealership;
+DROP DATABASE IF EXISTS cardealership;
 
-CREATE DATABASE cardealership;
+CREATE DATABASE IF NOT EXISTS cardealership;
+
+USE cardealership;
 
 CREATE TABLE Dealership (
     dealership_id INTEGER NOT NULL AUTO_INCREMENT,
