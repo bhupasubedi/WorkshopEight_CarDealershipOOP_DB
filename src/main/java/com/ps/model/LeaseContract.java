@@ -1,9 +1,8 @@
-package model;
+package com.ps.model;
 
 
 public class LeaseContract {
 
-    private int leasecontract_id;
     private String date;
     private String customerName;
     private String customerEmail;
@@ -16,24 +15,15 @@ public class LeaseContract {
     public LeaseContract() {
     }
 
-    public LeaseContract(int leasecontract_id, String date, String customerName, String customerEmail, int vehicleSold, double totalPrice, double monthlyPayment, double expectedEnding, double leaseFee) {
-        this.leasecontract_id = leasecontract_id;
+    public LeaseContract(String date, String customerName, String customerEmail, int vehicleId, double totalPrice, double monthlyPayment, double expectedEnding, double leaseFee) {
         this.date = date;
         this.customerName = customerName;
         this.customerEmail = customerEmail;
-        this.vehicleId = vehicleSold;
+        this.vehicleId = vehicleId;
         this.totalPrice = totalPrice;
         this.monthlyPayment = monthlyPayment;
         this.expectedEnding = expectedEnding;
         this.leaseFee = leaseFee;
-    }
-
-    public int getLeasecontract_id() {
-        return leasecontract_id;
-    }
-
-    public void setLeasecontract_id(int leasecontract_id) {
-        this.leasecontract_id = leasecontract_id;
     }
 
     public String getDate() {
@@ -103,11 +93,10 @@ public class LeaseContract {
     @Override
     public String toString() {
         return "LeaseContract{" +
-                "leasecontract_id=" + leasecontract_id +
                 ", date='" + date + '\'' +
                 ", customerName='" + customerName + '\'' +
                 ", customerEmail='" + customerEmail + '\'' +
-                ", vehicleSold=" + vehicleId +
+                ", vehicleId=" + vehicleId +
                 ", totalPrice=" + totalPrice +
                 ", monthlyPayment=" + monthlyPayment +
                 ", expectedEnding=" + expectedEnding +

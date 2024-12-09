@@ -3,6 +3,8 @@ package com.ps;
 
 public class Program {
     public static void main(String[] args) {
-        UserInterface.display();
+        String username = args[0];
+        String password = args[1];
+        UserInterface.display(username, password);
     }
 }

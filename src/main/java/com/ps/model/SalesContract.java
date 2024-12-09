@@ -1,9 +1,8 @@
-package model;
+package com.ps.model;
 
 
 
 public class SalesContract {
-    private int salescontract_id;
     private String date;
     private String customerName;
     private String customerEmail;
@@ -18,26 +17,17 @@ public class SalesContract {
     public SalesContract() {
     }
 
-    public SalesContract(double salesTaxAmount, int salescontract_id, String date, String customerName, String customerEmail, int vehicleSold, double totalPrice, double monthlyPayment, double recordingFee, double processingFee, boolean isFinanced) {
+    public SalesContract(double salesTaxAmount, String date, String customerName, String customerEmail, int vehicleId, double totalPrice, double monthlyPayment, double recordingFee, double processingFee, boolean isFinanced) {
         this.salesTaxAmount = salesTaxAmount;
-        this.salescontract_id = salescontract_id;
         this.date = date;
         this.customerName = customerName;
         this.customerEmail = customerEmail;
-        this.vehicleId = vehicleSold;
+        this.vehicleId = vehicleId;
         this.totalPrice = totalPrice;
         this.monthlyPayment = monthlyPayment;
         this.recordingFee = recordingFee;
         this.processingFee = processingFee;
         this.isFinanced = isFinanced;
-    }
-
-    public int getSalescontract_id() {
-        return salescontract_id;
-    }
-
-    public void setSalescontract_id(int salescontract_id) {
-        this.salescontract_id = salescontract_id;
     }
 
     public String getDate() {
@@ -123,11 +113,10 @@ public class SalesContract {
     @Override
     public String toString() {
         return "SalesContract{" +
-                "salescontract_id=" + salescontract_id +
                 ", date='" + date + '\'' +
                 ", customerName='" + customerName + '\'' +
                 ", customerEmail='" + customerEmail + '\'' +
-                ", vehicleSold=" + vehicleId +
+                ", vehicleId=" + vehicleId +
                 ", totalPrice=" + totalPrice +
                 ", monthlyPayment=" + monthlyPayment +
                 ", salesTaxAmount=" + salesTaxAmount +

@@ -6,9 +6,9 @@ USE cardealership;
 
 CREATE TABLE Dealership (
     dealership_id INTEGER NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL,
-    address VARCHAR(50),
-    phone VARCHAR(12),
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(255),
+    phone VARCHAR(255),
     CONSTRAINT pk_dealership PRIMARY KEY (dealership_id)
 );
 
@@ -23,12 +23,12 @@ CREATE TABLE Vehicle (
     price DOUBLE(10,2),
     dealership_id INTEGER,
     CONSTRAINT pk_vin PRIMARY KEY (vin),
-    FOREIGN KEY (dealership_id) REFERENCES dealership(dealership_id)
+    FOREIGN KEY (dealership_id) REFERENCES dealership(dealership_id) ON DELETE CASCADE
 );
 
 CREATE TABLE SalesContract (
     salescontract_id INTEGER AUTO_INCREMENT,
-    date DATE,
+    date VARCHAR(255),
     customerName VARCHAR(255),
     customerEmail VARCHAR(255),
     vehicleId INTEGER,
@@ -39,13 +39,13 @@ CREATE TABLE SalesContract (
     processingFee DOUBLE(10, 2),
     isFinanced BOOLEAN,
     CONSTRAINT pk_salescontract_id PRIMARY KEY (salescontract_id),
-    FOREIGN KEY (vehicleId) REFERENCES Vehicle(vin)
+    FOREIGN KEY (vehicleId) REFERENCES Vehicle(vin) ON DELETE CASCADE
 );
 
 
 CREATE TABLE LeaseContract (
     leasecontract_id INTEGER AUTO_INCREMENT,
-    date DATE,
+    date VARCHAR(255),
     customerName VARCHAR(255),
     customerEmail VARCHAR(255),
     vehicleId INTEGER,
@@ -54,7 +54,7 @@ CREATE TABLE LeaseContract (
     expectedEnding DOUBLE(10, 2),
     leaseFee DOUBLE(10, 2),
     CONSTRAINT pk_leasecontract_id PRIMARY KEY (leasecontract_id),
-    FOREIGN KEY (vehicleId) REFERENCES Vehicle(vin)
+    FOREIGN KEY (vehicleId) REFERENCES Vehicle(vin) ON DELETE CASCADE
 );
 
 

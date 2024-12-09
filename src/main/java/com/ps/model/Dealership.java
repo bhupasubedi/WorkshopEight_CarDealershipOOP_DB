@@ -1,10 +1,9 @@
-package model;
+package com.ps.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dealership {
-    private int dealership_id;
     private String name;
     private String address;
     private String phone;
@@ -22,13 +21,7 @@ public class Dealership {
     // Getters and Setters
 
 
-    public int getDealership_id() {
-        return dealership_id;
-    }
 
-    public void setDealership_id(int dealership_id) {
-        this.dealership_id = dealership_id;
-    }
 
     public String getName() {
         return name;
@@ -52,5 +45,14 @@ public class Dealership {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Dealership{" +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }

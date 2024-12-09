@@ -1,4 +1,4 @@
-package model;
+package com.ps.model;
 
 
 public class Vehicle {
